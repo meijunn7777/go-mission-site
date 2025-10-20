@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission Accepted</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeInBody 1.5s ease forwards;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; filter: blur(6px); }
+      to { opacity: 1; filter: blur(0); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: scale(0.95);
+      text-shadow: 0 0 15px #ff0000, 0 0 40px #ff0000;
+      color: #ff3b3b;
+      animation: reveal 2s ease forwards;
+    }
+
+    @keyframes reveal {
+      0% { opacity: 0; transform: scale(0.95); filter: blur(4px); }
+      60% { opacity: 1; transform: scale(1.05); filter: blur(0); }
+      100% { transform: scale(1); }
+    }
+
+    p {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #999;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 2s;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .links {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 3s;
+    }
+
+    a {
+      color: #777;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff4444;
+      text-shadow: 0 0 8px #ff4444, 0 0 16px #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <h1>MISSION: ACCEPTED</h1>
+  <p>Operation begins now.</p>
+
+  <div class="links">
+    <a href="music.html">← Back to Preparation</a>
+    <a href="index.html">← Back to Cassette</a>
+  </div>
+
+  <!-- Optional sound effect -->
+  <!--
+  <script>
+    window.addEventListener('load', () => {
+      const audio = new Audio('access_granted.mp3');
+      audio.volume = 0.3;
+      audio.play().catch(() => {});
+    });
+  </script>
+  -->
+</body>
+</html>
